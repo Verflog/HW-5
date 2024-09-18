@@ -2,39 +2,30 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Задачи 1 и 2");
         byte clientOs = 1;
-        short yearOfRelease = 2014;
-        if (yearOfRelease < 2015) {
-            switch (clientOs) {
-                case 0:
-                    System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-                    break;
-                case 1:
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                    break;
-                default:
-                    System.out.println("Мы не можем определить вашу ОС");
+        short clientDeviceYear = 2015;
+        if (clientDeviceYear < 2015) {
+            if (clientOs == 0) {
+                System.out.println("Установите облегченную версию приложения для IOS по ссылке");
+            }
+            else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
             }
         }
         else {
-            switch (clientOs) {
-                case 0:
-                    System.out.println("Установите версию приложения для IOS по ссылке");
-                    break;
-                case 1:
-                    System.out.println("Установите версию приложения для Android по ссылке");
-                    break;
-                default:
-                    System.out.println("Мы не можем определить вашу ОС");
+            if (clientOs == 0) {
+                System.out.println("Установите версию приложения для IOS по ссылке");
+            }
+            else {
+                System.out.println("Установите версию приложения для Android по ссылке");
             }
         }
         System.out.println("Задача 3");
         int year = 1984;
         short firstLeapYear = 1584;
-        int yearDifference = year - firstLeapYear;
         if (year < firstLeapYear) {
             System.out.println("Ещё не введён високосный год");
         }
-        else if ((yearDifference % 4 == 0 & yearDifference % 100 != 0) | yearDifference % 400 == 0) {
+        else if ((year % 4 == 0 & year % 100 != 0) | year % 400 == 0) {
             System.out.println(year + " год является високосным");
         }
         else {
