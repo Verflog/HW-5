@@ -25,7 +25,7 @@ public class Main {
         if (year < firstLeapYear) {
             System.out.println("Ещё не введён високосный год");
         }
-        else if ((year % 4 == 0 & year % 100 != 0) | year % 400 == 0) {
+        else if ((year % 4 == 0 & year % 100 != 0) || year % 400 == 0) {
             System.out.println(year + " год является високосным");
         }
         else {
