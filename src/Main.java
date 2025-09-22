@@ -3,21 +3,17 @@ public class Main {
         System.out.println("Задачи 1 и 2");
         byte clientOs = 1;
         short clientDeviceYear = 2015;
-        if (clientDeviceYear < 2015) {
-            if (clientOs == 0) {
-                System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-            }
-            else {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
+        if (clientDeviceYear < 2015 && clientOs == 0) {
+            System.out.println("Установите облегченную версию приложения для IOS по ссылке");
         }
-        else {
-            if (clientOs == 0) {
+        else if (clientDeviceYear < 2015 && clientOs == 1) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }
+        else if (clientDeviceYear >= 2015 && clientOs == 0) {
                 System.out.println("Установите версию приложения для IOS по ссылке");
             }
-            else {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+        else if (clientDeviceYear >= 2015 && clientOs == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
         System.out.println("Задача 3");
         int year = 1984;
